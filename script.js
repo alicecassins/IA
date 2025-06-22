@@ -6,72 +6,71 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Hoje começou um novo projeto na escola: uma aula de culinária usando tecnologia! A professora apresenta um aplicativo que usa IA para sugerir receitas com base nos ingredientes disponíveis. Qual é sua reação?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+                texto: "Achei incrível! Quero testar com os ingredientes da minha casa.",
+                afirmacao: "Você ficou empolgada com a ideia e logo quis experimentar receitas novas usando a IA como assistente. "
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "Prefiro seguir receitas tradicionais de livros e anotações antigas.",
+                afirmacao: "Você sentiu que as receitas clássicas ainda têm um valor especial e decidiu usá-las como base."
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "A professora propõe um desafio: criar um prato inédito usando a IA como ajuda. O que você faz?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
+                texto: "Pede para a IA gerar uma receita criativa e adapta com seu toque pessoal.",
+                afirmacao: "Você mostrou criatividade ao unir tecnologia e sua intuição culinária para criar algo único."
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
+                texto: "Reúne ideias com colegas, faz testes na cozinha e depois compara com sugestões da IA.",
+                afirmacao: "Você valorizou o trabalho em equipe e testou receitas na prática antes de considerar a tecnologia."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Na hora da preparação do prato, um colega usa IA para cronometrar e dar dicas em tempo real. Você:",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
+                texto: "Decide usar a mesma ferramenta e vê que ela realmente ajuda no preparo.",
+                afirmacao: "Você percebeu como a IA pode facilitar processos na cozinha e melhorar seus resultados."
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
+                texto: "Prefere seguir o preparo do prato no seu tempo e com sua organização.",
+                afirmacao: "Você percebeu que confia mais em sua experiência e organização própria ao cozinhar."
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Durante a aula, a professora pede uma apresentação do prato com imagem digital. Como você cria isso?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                texto: "Faz um desenho digital no Paint com os ingredientes e etapas do preparo.",
+                afirmacao: "Você usou ferramentas simples para expressar visualmente sua receita e ajudar outras pessoas a replicarem."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
+                texto: "Gera uma imagem realista com IA mostrando como seu prato ficou.",
+                afirmacao: "Você usou a IA para criar uma imagem atraente do prato e inspirar outras pessoas a quererem prová-lo."
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Na última etapa, um grupo entrega um prato copiado exatamente da IA, sem modificações. O que você faz?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Acha que não tem problema, pois usar IA já é uma forma de criar.",
+                afirmacao: "Você passou a usar a IA como principal fonte de criação, mesmo sem adicionar suas ideias pessoais."
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Acredita que é importante personalizar e revisar qualquer receita sugerida pela IA.",
+                afirmacao: "Você entendeu que a IA é uma aliada, mas que sua criatividade é essencial para dar identidade ao prato."
             }
         ]
-    },
+    }
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -105,7 +104,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "Sua jornada na cozinha digital...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
