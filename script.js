@@ -3,6 +3,7 @@ const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
+const botaoReiniciar = document.querySelector(".botao-reiniciar");
 
 const perguntas = [
     {
@@ -81,14 +82,20 @@ function mostraPergunta() {
         mostraResultado();
         return;
     }
+
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
+
+    // LIMPA O RESULTADO VISUALMENTE AO REINICIAR
+    caixaResultado.style.display = "none";
+    textoResultado.textContent = "";
+
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -107,6 +114,15 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Sua jornada na cozinha digital...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    caixaResultado.style.display = "block"; // Mostra o resultado
+    botaoReiniciar.style.display = "inline-block"; // Mostra o botão de reinício
 }
+
+botaoReiniciar.addEventListener("click", () => {
+    atual = 0;
+    historiaFinal = "";
+    botaoReiniciar.style.display = "none"; // Esconde o botão ao reiniciar
+    mostraPergunta();
+});
 
 mostraPergunta();
